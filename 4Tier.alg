@@ -1,66 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="AFFICHER tab[nb-1]"/>
+    <description courant="AFFICHER &quot;Entrez des entiers, tapez 0 pour arreter la boucle &quot;" texte=""/>
     <extension extnom="inactif"/>
     <fonction fctcode="" fctetat="inactif"/>
-    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
-    <repere repetat="inactif" repcode="-10#10#-10#10#2#2"/>
-    <param nbDecimales="8" totalAffichages="1000" totalBoucles="5000000" arrondiAuto="vrai" epaisseurPoint="2" epaisseurLigne="2" maxBoucle="500000"/>
-    <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
-    <item code="100#declarationsvariables" algoitem="VARIABLES">
-        <item code="1#LISTE#tab" algoitem="tab EST_DU_TYPE LISTE"/>
-        <item code="1#NOMBRE#i" algoitem="i EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#nb" algoitem="nb EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#data" algoitem="data EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#inver" algoitem="inver EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#tp" algoitem="tp EST_DU_TYPE NOMBRE"/>
+    <F2 F2lignes="" F2para="" F2etat="inactif" F2defaut=""/>
+    <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
+    <param totalBoucles="5000000" epaisseurPoint="2" maxBoucle="500000" totalAffichages="1000" epaisseurLigne="2" arrondiAuto="vrai" nbDecimales="8"/>
+    <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
+    <item algoitem="VARIABLES" code="100#declarationsvariables">
+        <item algoitem="tab EST_DU_TYPE LISTE" code="1#LISTE#tab"/>
+        <item algoitem="i EST_DU_TYPE NOMBRE" code="1#NOMBRE#i"/>
+        <item algoitem="nb EST_DU_TYPE NOMBRE" code="1#NOMBRE#nb"/>
+        <item algoitem="data EST_DU_TYPE NOMBRE" code="1#NOMBRE#data"/>
+        <item algoitem="inver EST_DU_TYPE NOMBRE" code="1#NOMBRE#inver"/>
+        <item algoitem="tp EST_DU_TYPE NOMBRE" code="1#NOMBRE#tp"/>
     </item>
-    <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
-        <item code="4#Trie des liste#0" algoitem="AFFICHER &quot;Trie des liste&quot;"/>
-        <item code="4#Entrez des entiers#0" algoitem="AFFICHER &quot;Entrez des entiers&quot;"/>
-        <item code="5#nb#0#pasliste" algoitem="nb PREND_LA_VALEUR 0"/>
-        <item code="2#data#pasliste" algoitem="LIRE data"/>
-        <item code="15#data!=0" algoitem="TANT_QUE (data!=0) FAIRE">
-            <item code="16#debuttantque" algoitem="DEBUT_TANT_QUE"/>
-            <item code="5#tab#data#nb" algoitem="tab[nb] PREND_LA_VALEUR data"/>
-            <item code="5#nb#nb+1#pasliste" algoitem="nb PREND_LA_VALEUR nb+1"/>
-            <item code="2#data#pasliste" algoitem="LIRE data"/>
-            <item code="17#fintantque" algoitem="FIN_TANT_QUE"/>
+    <item algoitem="DEBUT_ALGORITHME" code="101#debutalgo">
+        <item algoitem="AFFICHER &quot;Trie des liste&quot;" code="4#Trie des liste#0"/>
+        <item algoitem="AFFICHER &quot;Entrez des entiers, tapez 0 pour arreter la boucle &quot;" code="4#Entrez des entiers, tapez 0 pour arreter la boucle #0"/>
+        <item algoitem="nb PREND_LA_VALEUR 0" code="5#nb#0#pasliste"/>
+        <item algoitem="LIRE data" code="2#data#pasliste"/>
+        <item algoitem="TANT_QUE (data!=0) FAIRE" code="15#data!=0">
+            <item algoitem="DEBUT_TANT_QUE" code="16#debuttantque"/>
+            <item algoitem="tab[nb] PREND_LA_VALEUR data" code="5#tab#data#nb"/>
+            <item algoitem="nb PREND_LA_VALEUR nb+1" code="5#nb#nb+1#pasliste"/>
+            <item algoitem="LIRE data" code="2#data#pasliste"/>
+            <item algoitem="FIN_TANT_QUE" code="17#fintantque"/>
         </item>
-        <item code="12#i#0#nb-2" algoitem="POUR i ALLANT_DE 0 A nb-2">
-            <item code="13#debutpour" algoitem="DEBUT_POUR"/>
-            <item code="3#tab#0#i" algoitem="AFFICHER tab[i]"/>
-            <item code="4#, #0" algoitem="AFFICHER &quot;, &quot;"/>
-            <item code="14#finpour" algoitem="FIN_POUR"/>
+        <item algoitem="POUR i ALLANT_DE 0 A nb-2" code="12#i#0#nb-2">
+            <item algoitem="DEBUT_POUR" code="13#debutpour"/>
+            <item algoitem="AFFICHER tab[i]" code="3#tab#0#i"/>
+            <item algoitem="AFFICHER &quot;, &quot;" code="4#, #0"/>
+            <item algoitem="FIN_POUR" code="14#finpour"/>
         </item>
-        <item code="3#tab#1#nb-1" algoitem="AFFICHER tab[nb-1]"/>
-        <item code="19#Trier les donnees dans ordres croissant" algoitem="//Trier les donnees dans ordres croissant"/>
-        <item code="5#inver#1#pasliste" algoitem="inver PREND_LA_VALEUR 1"/>
-        <item code="15#inver==1" algoitem="TANT_QUE (inver==1) FAIRE">
-            <item code="16#debuttantque" algoitem="DEBUT_TANT_QUE"/>
-            <item code="5#inver#0#pasliste" algoitem="inver PREND_LA_VALEUR 0"/>
-            <item code="12#i#0#nb-2" algoitem="POUR i ALLANT_DE 0 A nb-2">
-                <item code="13#debutpour" algoitem="DEBUT_POUR"/>
-                <item code="6#tab[i]>tab[i+1]" algoitem="SI (tab[i]>tab[i+1]) ALORS">
-                    <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                    <item code="5#tp#tab[i]#pasliste" algoitem="tp PREND_LA_VALEUR tab[i]"/>
-                    <item code="5#tab#tab[i+1]#i" algoitem="tab[i] PREND_LA_VALEUR tab[i+1]"/>
-                    <item code="5#tab#tp#i+1" algoitem="tab[i+1] PREND_LA_VALEUR tp"/>
-                    <item code="5#inver#1#pasliste" algoitem="inver PREND_LA_VALEUR 1"/>
-                    <item code="8#finsi" algoitem="FIN_SI"/>
+        <item algoitem="AFFICHER tab[nb-1]" code="3#tab#1#nb-1"/>
+        <item algoitem="//Trier les donnees dans ordres croissant" code="19#Trier les donnees dans ordres croissant"/>
+        <item algoitem="inver PREND_LA_VALEUR 1" code="5#inver#1#pasliste"/>
+        <item algoitem="TANT_QUE (inver==1) FAIRE" code="15#inver==1">
+            <item algoitem="DEBUT_TANT_QUE" code="16#debuttantque"/>
+            <item algoitem="inver PREND_LA_VALEUR 0" code="5#inver#0#pasliste"/>
+            <item algoitem="POUR i ALLANT_DE 0 A nb-2" code="12#i#0#nb-2">
+                <item algoitem="DEBUT_POUR" code="13#debutpour"/>
+                <item algoitem="SI (tab[i]>tab[i+1]) ALORS" code="6#tab[i]>tab[i+1]">
+                    <item algoitem="DEBUT_SI" code="7#debutsi"/>
+                    <item algoitem="tp PREND_LA_VALEUR tab[i]" code="5#tp#tab[i]#pasliste"/>
+                    <item algoitem="tab[i] PREND_LA_VALEUR tab[i+1]" code="5#tab#tab[i+1]#i"/>
+                    <item algoitem="tab[i+1] PREND_LA_VALEUR tp" code="5#tab#tp#i+1"/>
+                    <item algoitem="inver PREND_LA_VALEUR 1" code="5#inver#1#pasliste"/>
+                    <item algoitem="FIN_SI" code="8#finsi"/>
                 </item>
-                <item code="14#finpour" algoitem="FIN_POUR"/>
+                <item algoitem="FIN_POUR" code="14#finpour"/>
             </item>
-            <item code="17#fintantque" algoitem="FIN_TANT_QUE"/>
+            <item algoitem="FIN_TANT_QUE" code="17#fintantque"/>
         </item>
-        <item code="19#les donnees trier" algoitem="//les donnees trier"/>
-        <item code="12#i#0#nb-2" algoitem="POUR i ALLANT_DE 0 A nb-2">
-            <item code="13#debutpour" algoitem="DEBUT_POUR"/>
-            <item code="3#tab#0#i" algoitem="AFFICHER tab[i]"/>
-            <item code="4#, #0" algoitem="AFFICHER &quot;, &quot;"/>
-            <item code="14#finpour" algoitem="FIN_POUR"/>
+        <item algoitem="//les donnees trier" code="19#les donnees trier"/>
+        <item algoitem="POUR i ALLANT_DE 0 A nb-2" code="12#i#0#nb-2">
+            <item algoitem="DEBUT_POUR" code="13#debutpour"/>
+            <item algoitem="AFFICHER tab[i]" code="3#tab#0#i"/>
+            <item algoitem="AFFICHER &quot;, &quot;" code="4#, #0"/>
+            <item algoitem="FIN_POUR" code="14#finpour"/>
         </item>
-        <item code="3#tab#1#nb-1" algoitem="AFFICHER tab[nb-1]"/>
+        <item algoitem="AFFICHER tab[nb-1]" code="3#tab#1#nb-1"/>
     </item>
-    <item code="102#finalgo" algoitem="FIN_ALGORITHME"/>
+    <item algoitem="FIN_ALGORITHME" code="102#finalgo"/>
 </Algo>
